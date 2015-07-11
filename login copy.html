@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Login Page1 19thjune</title>
+
+<!--make sure you have downloaded that bootstrap file from the net and kept the file 'bootstrap.css' in the same folder in order for the styles to work.-->
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400italic' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet"  type="text/css"  href="shift.css">
+
+<link rel="stylesheet" href="bootstrap.css">
+
+</head>
+
+<body>
+
+<!--login form starts here as a list: edited 19th jun @nad-->
+<!--added linear-gradient to navcontainer and also sizing, padding of elements (colour can be changed later): edited 20th jun @nad-->
+<!--added name="" for the passwords and emails for java database on 23 jun 
+	//
+
+	REFERENCE: email1  and password1 for login @nad-->
+<small>
+<div id="navcontainer">
+<ul id="navlist">
+
+
+<li>
+
+
+ <form class="form-inline" style='float:right; padding: 5px;'>
+
+  <button type="submit" class="btn btn-default" style="height:29px;"><small><b>Sign in</b></small></button>
+</form>
+
+
+
+
+<form class="form-inline" style='float:right; padding: 5px;'>
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> <small>Remember me</small> 
+    </label>
+  </div>
+ </form>
+
+
+ <form class="form-inline" style='float:right; padding: 5px;'>
+
+   <div class="form-group">
+
+    <label class="sr-only" for="exampleInputPassword3" style="padding:5px;">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password"  name="password1" style="width:100px; height:15px;">
+ 
+ </div>
+</form>
+<form class="form-inline" style='float:right; padding: 5px;'>
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputEmail3" style="padding:5px; padding-top:5px;" >Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email" name="email1" style="width:170px; height:15px;">
+  </div>  
+</form>
+</li>
+
+<li style='float:right; padding-top: 1px; padding-right:0px;'> <h5>Already a member?</h5> </a> </li>
+
+</ul>
+</div>
+</small>
+
+<!--rajat is secretly gay-->
+<!--SIGNUP FORM STARTS HERE: edited on 19th jun @nad-->
+<!--Shifted form box to the right of page on 21 jun -- >
+<!--added name="" for the passwords and emails for java database on 23 jun @nad
+//
+
+	REFERENCE: first  - first name , last - last name , email - email2 , password - password2  @nad-->
+
+
+
+
+<div class="container" style="float:right;">
+        <div class="row centered-form">
+        <div class="col-xs-12 col-sm-2 col-md-10 col-sm-offset-2 col-md-offset-4">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<center><h3 class="panel-title">Sign up here!</h3></center>
+			 			</div>
+			 			<div class="panel-body">
+			    		<center>
+			    			<form role="form">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			                <input type="text" name="first_name" id="first_name" class="form-control input-sm" name="first" placeholder="First Name" >
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" name="last" placeholder="Last Name">
+			    					</div>
+			    				</div>
+			    			</div>
+
+			    			<div class="form-group">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address"  name="email2" style="width :160px;padding-right:70px;padding-left:20">
+			    			</div>
+
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password2" id="password" class="form-control input-sm" placeholder="Password"  name="password2"  >
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password" name="password2">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			
+			    			<input type="submit" value="Register" class="btn btn-info btn-block" style="width: 150px;">
+			    		
+			    		</form>
+			    	</center>
+			    	</div>
+	    		</div>
+    		</div>
+    	</div>
+    </div>
+
+
+</body>
+
+</html>
