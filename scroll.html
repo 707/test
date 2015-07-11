@@ -8,7 +8,21 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+
+<!--DO NOT TOUCH
+The links for the new post pop-up box
+@nad-->
+
+<link rel="stylesheet" type="text/css" href="popup.css">
+<script src="jquery-2.1.4.js"></script>
+<script src="popup.js"></script>
+
+<!--ends here DO NOT TOUCH-->
+
+</head>
+
 <body>
+
 <style>
   body {
       position: relative;
@@ -44,8 +58,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
         margin-left: 150px;
     }
   }
-  </style>
-</head>
+
+</style>
+
+
+
 <nav class="navbar navbar-inverse navbar-fixed-top" >
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -83,8 +100,38 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right" align="right">
-        <li><a href="#">+</a></li>
-        <li class="dropdown">
+        
+
+        <!--'+' new post form starts here @nad 11jul-->
+          <li>
+          
+
+          <div class="messagepop pop">
+
+            <form method="post" id="new_message" action="#">
+              <p> 
+                <label for="newpost">Enter a Title here:</label>
+                <input type="text" size="30" name="new_title" id="new_title" />
+              </p>
+
+              <p>
+                <label for="body">Write your article here:</label>
+                <textarea rows="6" name="new_content" id="new_content" cols="35"></textarea>
+              </p>
+              
+              <p>
+                <input type="submit" value="Submit Post" name="submit_post" id="message_submit"/>   <input type="submit" value="Discard" name="cancel" id="cancel"/>
+              </p>
+            </form>
+          </div>
+
+          <a href="/pushpost" id="pushpost">+</a>
+          </li>
+          <!--new post form ends here-->
+          
+
+
+          <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
