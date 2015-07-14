@@ -27,13 +27,13 @@ The links for the new post pop-up box
   body {
       position: relative;
       margin-top:50px;
-      background: rgba(241,231,103,1);
-background: -moz-linear-gradient(top, rgba(241,231,103,1) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(241,231,103,1)), color-stop(65%, rgba(253,187,72,1)), color-stop(72%, rgba(254,182,69,1)), color-stop(100%, rgba(254,182,69,1)));
-background: -webkit-linear-gradient(top, rgba(241,231,103,1) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
-background: -o-linear-gradient(top, rgba(241,231,103,1) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
-background: -ms-linear-gradient(top, rgba(241,231,103,1) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
-background: linear-gradient(to bottom, rgba(241,231,103,1) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
+      background: rgba(#ffffff);
+background: -moz-linear-gradient(top, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(#ffffff)), color-stop(65%, rgba(253,187,72,1)), color-stop(72%, rgba(254,182,69,1)), color-stop(100%, rgba(254,182,69,1)));
+background: -webkit-linear-gradient(top, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
+background: -o-linear-gradient(top, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
+background: -ms-linear-gradient(top, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
+background: linear-gradient(to bottom, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=0 );
   }
   ul.nav-pills {
@@ -110,17 +110,40 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
 
             <form method="post" id="new_message" action="#">
               <p> 
-                <label for="newpost">Enter a Title here:</label>
-                <input type="text" size="30" name="new_title" id="new_title" />
+                <label for="newpost" style="font-size:17px;">Enter a Title here:</label>
+                <!--<input type="text" size="30" name="new_title" id="new_title" />-->
+                <input type="text" class="form-control" placeholder="Write your title here!" name="new_title" id="new_title">
+
+              </p>
+              <p>
+
+                <select class="form-control input-sm">
+                  <option><b>Design</b></option>
+                  <option><b>Entertainment</b></option>
+                  <option><b>Fashion</b></option>
+                  <option><b>Technology</b></option>
+                  <option><b>Travel</b></option>
+                </select>
+              </p>  
+
+              <p> 
+                <label for="newpost" style="font-size:17px;">Enter a Description here:</label>
+                <!--<input type="text" size="30" name="new_title" id="new_title" />-->
+                <input type="text" class="form-control" placeholder="Write your title here!" name="new_descp" id="new_descp">
+
               </p>
 
               <p>
-                <label for="body">Write your article here:</label>
-                <textarea rows="6" name="new_content" id="new_content" cols="35"></textarea>
+                <label for="body" style="font-size:17px;">Write your article here:</label>
+                <!--<textarea rows="6" name="new_content" id="new_content" cols="35"></textarea>-->
+                <textarea class="form-control" rows="3" placeholder="Write your article here!" name="new_content" id="new_article"></textarea>
               </p>
               
               <p>
-                <input type="submit" value="Submit Post" name="submit_post" id="message_submit"/>   <input type="submit" value="Discard" name="cancel" id="cancel"/>
+                <!--<input type="submit" value="Submit Post" name="submit_post" id="message_submit"/> -->
+                <button type="submit" name="submit_post" class="btn btn-info">Submit</button>
+                 <!-- <input type="submit" value="Discard" name="cancel" id="cancel"/>-->
+                 <button type="submit" name="discard_post" class="btn btn-info">Discard</button>
               </p>
             </form>
           </div>
