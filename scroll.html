@@ -50,11 +50,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
   #section1 {color: #fff; background-color: #1E88E5;}
   #section2 {color: #fff; background-color: #673ab7;}
   #section3 {color: #fff; background-color: #ff9800;}
-  #section41 {color: #fff; background-color: #00bcd4;}
-  #section42 {color: #fff; background-color: #009688;}
+  #section4 {color: #fff; background-color: #00bcd4;}
+  #section5 {color: #fff; background-color: #009688;}
   
   @media screen and (max-width: 810px) {
-    #section1, #section2, #section3, #section41, #section42  {
+    #section1, #section2, #section3, #section4, #section5 {
         margin-left: 150px;
     }
   }
@@ -106,9 +106,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
           <li>
           
 
-          <div class="messagepop pop">
-
+          <div class="messagepop pop"  >
+           <button class ="close">&times</button>
             <form method="post" id="new_message" action="#">
+
               <p> 
                 <label for="newpost" style="font-size:17px;">Enter a Title here:</label>
                 <!--<input type="text" size="30" name="new_title" id="new_title" />-->
@@ -129,7 +130,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
               <p> 
                 <label for="newpost" style="font-size:17px;">Enter a Description here:</label>
                 <!--<input type="text" size="30" name="new_title" id="new_title" />-->
-                <input type="text" class="form-control" placeholder="Write your title here!" name="new_descp" id="new_descp">
+                <input type="text" class="form-control" placeholder="Write your description here!" name="new_descp" id="new_descp">
 
               </p>
 
@@ -141,14 +142,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
               
               <p>
                 <!--<input type="submit" value="Submit Post" name="submit_post" id="message_submit"/> -->
-                <button type="submit" name="submit_post" class="btn btn-info">Submit</button>
+                <button type="submit" name="submit_post" class="btn btn-info" id="submit_new">Submit</button>
                  <!-- <input type="submit" value="Discard" name="cancel" id="cancel"/>-->
-                 <button type="submit" name="discard_post" class="btn btn-info">Discard</button>
+                 <button type="submit" name="discard_post" class="btn btn-info" id="discard_new">Discard</button>
               </p>
             </form>
           </div>
 
-          <a href="/pushpost" id="pushpost">+</a>
+          <a href="/pushpost" id="pushpost"> + </a>
           </li>
           <!--new post form ends here-->
           
@@ -176,8 +177,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
         <li class="active"><a href="#section1">Travel</a></li>
         <li><a href="#section2">Technology</a></li>
         <li><a href="#section3">Entertainment</a></li>
-        <li><a href="#section41">Design</a></li>
-        <li><a href="#section42">Fashion</a></li>                     
+        <li><a href="#section4">Design</a></li>
+        <li><a href="#section5">Fashion</a></li>                     
       </ul>
       </li>
       </ul>
@@ -195,11 +196,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
         <h1>Entertainment</h1>
         
       </div>
-      <div id="section41">         
+      <div id="section4">         
         <h1>Design</h1>
         
       </div>      
-      <div id="section42">         
+      <div id="section5">         
         <h1>Fashion</h1>
         
       </div>

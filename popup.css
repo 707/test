@@ -47,3 +47,12 @@ width:100%;
   margin: 8px 0;
   padding-bottom: 8px;
 }
+#new_article
+{
+  resize:none;
+  height: 160px;
+}
+#discard_new
+{
+  position: relative;
+}
