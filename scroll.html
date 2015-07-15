@@ -35,9 +35,9 @@ background: -o-linear-gradient(top, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rg
 background: -ms-linear-gradient(top, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
 background: linear-gradient(to bottom, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=0 );
-  }
-  ul.nav-pills {
-      top: 80px;
+}
+  ul.nav-pills{
+      top: 70px;
       position: fixed;
   }
   div.col-sm-9 div {
@@ -45,6 +45,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
       padding-left: 15px;   
       height: 220px;
       font-size: 20px;
+      position: relative;
 
   }
   #section1 {color: #fff; background-color: #1E88E5;}
@@ -172,38 +173,36 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', end
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
 <div class="container">
   <div class="row">
-    <nav class="col-sm-3" id="myScrollspy">
+    <nav class="col-sm-3" data-spy="scroll" data-toggle="pill" id="myScrollspy">
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">Travel</a></li>
+        <li><a href="#section1">Travel</a></li>
         <li><a href="#section2">Technology</a></li>
         <li><a href="#section3">Entertainment</a></li>
         <li><a href="#section4">Design</a></li>
         <li><a href="#section5">Fashion</a></li>                     
       </ul>
-      </li>
-      </ul>
     </nav>
     <div class="col-sm-9">
       <div id="section1">    
-        <h2>Travel</h2>
-        
-      </div>
+       <h2>Travel</h2>
+       </div>
+      
       <div id="section2"> 
         <h1>Technology</h1>
-        
       </div>        
+      
       <div id="section3">         
         <h1>Entertainment</h1>
-        
       </div>
+      
       <div id="section4">         
-        <h1>Design</h1>
-        
+        <h1>Design</h1>  
       </div>      
+
       <div id="section5">         
         <h1>Fashion</h1>
-        
       </div>
+
     </div>
   </div>
 </div>
