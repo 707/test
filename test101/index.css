@@ -50,37 +50,37 @@ body { font-family: sans-serif; }
   width: 300px;
   height: 250px;
   float: left;
-  margin: 50px;
-
+  margin-top: 80px;
+  margin-left: 50px;
   }
 .panel-success{
 
   width: 300px;
   height: 250px;
   float: left;
-  margin: 50px;
-
+  margin-top: 80px;
+  margin-left: 50px;
   }.panel-info{
 
   width: 300px;
   height: 250px;
   float: left;
-  margin: 50px;
-
+  margin-top: 80px;
+  margin-left: 50px;
   }.panel-warning{
 
   width: 300px;
   height: 250px;
   float: left;
-  margin: 50px;
-
+  margin-top: 80px;
+  margin-left: 50px;
   }.panel-danger{
 
   width: 300px;
   height: 250px;
   float: left;
-  margin: 50px;
-
+  margin-top: 80px;
+  margin-left: 50px;
   }
 
 .btn-default {
