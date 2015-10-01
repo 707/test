@@ -8,8 +8,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-
-
 <!--DO NOT TOUCH
 The links for the new post pop-up box
 @nad-->
@@ -17,6 +15,7 @@ The links for the new post pop-up box
 <link rel="stylesheet" type="text/css" href="popup.css">
 <script src="jquery-2.1.4.js"></script>
 <script src="popup.js"></script>
+
 
 <!--ends here DO NOT TOUCH-->
 
@@ -28,46 +27,48 @@ The links for the new post pop-up box
   body {
       position: relative;
       margin-top:50px;
+      background: transparent;
+      background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
       background: rgba(#ffffff);
-background: -moz-linear-gradient(top, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(#ffffff)), color-stop(65%, rgba(253,187,72,1)), color-stop(72%, rgba(254,182,69,1)), color-stop(100%, rgba(254,182,69,1)));
-background: -webkit-linear-gradient(top, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
-background: -o-linear-gradient(top, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
-background: -ms-linear-gradient(top, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
-background: linear-gradient(to bottom, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=0 );
+      background: -moz-linear-gradient(top, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(#ffffff)), color-stop(65%, rgba(253,187,72,1)), color-stop(72%, rgba(254,182,69,1)), color-stop(100%, rgba(254,182,69,1)));
+      background: -webkit-linear-gradient(top, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
+      background: -o-linear-gradient(top, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
+      background: -ms-linear-gradient(top, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
+      background: linear-gradient(to bottom, rgba(#ffffff) 0%, rgba(253,187,72,1) 65%, rgba(254,182,69,1) 72%, rgba(254,182,69,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=0 );
 }
   ul.nav-pills{
       top: 70px;
+      /*background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);*/
       position: fixed;
-  }
+      background: transparent;
+     }
   div.col-sm-9 div {
+      background: transparent;
+      /*background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);*/
       border-radius: 15px; 
       padding-left: 15px;   
       height: 300px;
       font-size: 20px;
-
-  }
-  #section1 {color: #fff; background-color: #1E88E5;}
-  #section2 {color: #fff; background-color: #673ab7;}
-  #section3 {color: #fff; background-color: #ff9800;}
-  #section4 {color: #fff; background-color: #00bcd4;}
-  #section5 {color: #fff; background-color: #009688;}
+     }
+  #section1 { overflow: scroll; background-color: #1E88E5;}
+  #section2 { background-color: #673ab7}
+  #section3 { background-color: #ff9800}
+  #section4 { background-color: #00bcd4}
+  #section5 { background-color: #009688}
   
   @media screen and (max-width: 910px) {
     #section1, #section2, #section3, #section4, #section5 {
+
         margin-left: 180px;
-    }
+        }
   }
 #searchbox {
-
 width: 300px;
-height: 10px;  
-
+height: 10px; 
 }
 </style>
-
-
 
 <nav class="navbar navbar-inverse navbar-fixed-top" >
   <div class="container-fluid">
@@ -99,32 +100,30 @@ height: 10px;
           </ul>
         </li>
       </ul>-->
-      <form class="navbar-form navbar-right" role="search" >
+      <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <!--<input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>-->
-        <div id="searchbox" >
+        <div id="searchbox">
         <gcse:searchbox>      </form> </div></div>
       <ul class="nav navbar-nav navbar-right" align="right">
         
-
         <!--'+' new post form starts here @nad 11jul-->
           <li>
           
-
-          <div class="messagepop pop"  >
+          <div class="messagepop pop">
            <button class ="close">&times</button>
             <form method="post" id="new_message" action="#">
-
+             
               <p> 
                 <label for="newpost" style="font-size:17px;">Enter a Title here:</label>
                 <!--<input type="text" size="30" name="new_title" id="new_title" />-->
                 <input type="text" class="form-control" placeholder="Write your title here!" name="new_title" id="new_title">
-
+               
               </p>
               <p>
-
+              
                 <select class="form-control input-sm">
                   <option><b>Design</b></option>
                   <option><b>Entertainment</b></option>
@@ -133,14 +132,13 @@ height: 10px;
                   <option><b>Travel</b></option>
                 </select>
               </p>  
-
+              
               <p> 
                 <label for="newpost" style="font-size:17px;">Enter a Description here:</label>
                 <!--<input type="text" size="30" name="new_title" id="new_title" />-->
                 <input type="text" class="form-control" placeholder="Write your description here!" name="new_descp" id="new_descp">
-
               </p>
-
+               
               <p>
                 <label for="body" style="font-size:17px;">Write your article here:</label>
                 <!--<textarea rows="6" name="new_content" id="new_content" cols="35"></textarea>-->
@@ -155,13 +153,11 @@ height: 10px;
               </p>
             </form>
           </div>
-
+           
           <a href="/pushpost" id="pushpost"> + </a>
           </li>
           <!--new post form ends here-->
           
-
-
           <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -193,6 +189,8 @@ height: 10px;
     <div class="col-sm-9">
       <div id="section1">    
         <h2>Travel</h2>
+        <p>1kjb1kj<br>kjbsd<br>shdbks<br>s
+        <br>en<br>b<br>bhys<br>hsbd<br>shbs<br>skdhb<br>shb<br></p>
         
       </div>
       <div id="section2"> 
@@ -209,7 +207,6 @@ height: 10px;
       </div>      
       <div id="section5">         
         <h1>Fashion</h1>
-        
       </div>
 </div>
  <!--script for the Google Search Box starts now--> 
@@ -227,7 +224,6 @@ height: 10px;
 </script>
 <!--script ends here-->
 <gcse:searchresults>
-
 
   </div>
 </div>
