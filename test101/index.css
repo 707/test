@@ -8,7 +8,7 @@ body { font-family: sans-serif; }
 /* ---- grid ---- */
 
 .grid {
-  background: green;
+  background: pink;
   max-width: 2500px;
   height: 1200px;
 }
@@ -23,23 +23,22 @@ body { font-family: sans-serif; }
 /* ---- grid-item ---- */
 
 .grid-item {
-  width: 160px;
-  height: 120px;
+  width: 300px;
+  height: 200px;
   float: left;
   background: #D26;
   border: 2px solid #333;
   /* added margin */
   margin: 50px;
-
   border-color: hsla(0, 0%, 0%, 0.5);
   border-radius: 5px;
 }
 
 .grid-item--width2 { width: 500px; background: blue;}
-.grid-item--width3 { width: 48px; }
-.grid-item--width4 { width: 640px; }
+.grid-item--width3 { width: 600px; }
+.grid-item--width4 { width: 500px; }
 
 .grid-item--height2 { height: 500px; }
-.grid-item--height3 { height: 560px; }
-.grid-item--height4 { height: 360px; }
+.grid-item--height3 { height: 500px; }
+.grid-item--height4 { height: 500px; }
 
