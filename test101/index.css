@@ -82,3 +82,13 @@ body { font-family: sans-serif; }
   margin: 50px;
 
   }
+
+.btn-default {
+
+position: relative;
+float:inline-end;  }
+
+.panel-body{
+
+  word-wrap: break-word;
+}
