@@ -1,0 +1,37 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="index.css"> 
+
+<script language="javascript" type="text/javascript" src="masonry.pkgd.js"></script>
+
+
+<script type="text/javascript">
+	// external js: masonry.pkgd.js
+
+$(document).ready( function() {
+
+  $('.grid').masonry({
+    itemSelector: '.grid-item',
+    columnWidth: 160
+  });
+  
+});
+
+
+</script>
+</head>
+
+<body>
+
+<div class="grid">
+  	<div class="grid-item"></div>
+<a href="http://google.com">
+
+  	<div class="grid-item grid-item--width2 grid-item--height2"><p style="color: white">hjasdkhsakjdhka</p></div>
+</a>
+<a href="http://yahoo.com">
+  	<div class="grid-item grid-item--height3"></div>
+  </a>
+</div>
+
+</html>
