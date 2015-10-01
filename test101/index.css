@@ -92,3 +92,7 @@ float:inline-end;  }
 
   word-wrap: break-word;
 }
+
+a:link { color: black } /* unvisited links */
+a:visited { color: black } /* visited links */
+a:hover {  color: black; } /* user hovers */
