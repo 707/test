@@ -10,10 +10,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%! public static int postTrack = 0; %>
-    <%! public List<String> types = new ArrayList<String>(); %>
-    <%! public List<String> buttonColors = new ArrayList<String>(); %>
-    
-    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -22,33 +18,12 @@
 </head>
 <body>
 <!DOCTYPE html>
-
+<html>
 <head>
-<meta charset="ISO-8859-1"><link rel="stylesheet" type="text/css" href="index.css"> 
-<link rel="stylesheet" type="text/css" href="bootstrap.css"> 
-
-
-<script language="javascript" type="text/javascript" src="masonry.pkgd.js"></script>
-
-
-<script type="text/javascript">
-	// external js: masonry.pkgd.js
-
-$(document).ready( function() {
-
-  $('.grid').masonry({
-    itemSelector: '.grid-item',
-    columnWidth: 160
-  });
-  
-});
-
-
-</script></head>
-
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
 <body>
-
-
 Hi. Welcome to test 101.
 <hr>
 
@@ -82,11 +57,11 @@ Hi. Welcome to test 101.
 
 <form action="AddPost" method="POST">
 <label>title</label>
-	<input type="text" name="titleField" >
+	<input type="text" name="title" id="title">
 	<br>
 	<label>category</label>
 	
-	<select  name="categoryField">
+	<select id="categories"  name="category">
 			<option>music</option>
 			<option>life</option>
 			<option>cars</option>
@@ -96,7 +71,7 @@ Hi. Welcome to test 101.
 	<!-- <input type="text" name="category" id="category"> -->
 	<br>
 	<label>content</label>
-	<textarea rows="10" cols="50" name="contentField"></textarea>
+	<textarea rows="10" cols="50" name="content"></textarea>
 	<br>
 	<input type="submit" value="submit">
 	<br>
@@ -117,17 +92,7 @@ Hi. Welcome to test 101.
 All the posts will be displayed below.
 </p>
 <%
-types.add(0, "panel-primary");
-types.add(1, "panel-success");
-types.add(2, "panel-info");
-types.add(3, "panel-warning");
-types.add(4, "panel-danger");
 
-buttonColors.add(0,"btn-primary");
-buttonColors.add(1,"btn-success");
-buttonColors.add(2,"btn-info");
-buttonColors.add(3,"btn-warning");
-buttonColors.add(4,"btn-danger");
 try{
 	Connection con = DBConnection.getConnection();
 
@@ -153,48 +118,54 @@ try{
 		content.add(result.getString(4));
 		timestamp.add(result.getString(6));
 	}
-	%><div class="grid">
- <%
-	for(int i = 0, j = count, k = 0; i < count; i++, j--, k++){
-		if(k>4){
-			k=0;
-		}
+	
+	for(int i = 0, j = count; i < count; i++, j--){
 		%>
-	
- <div class="panel <%=types.get(k)%>">
-
-  <div class="panel-heading">
-
-    <h3 class="panel-title">Panel title</h3>
-
-  </div>
-
-  <div class="panel-body">
-	<% 
-	
-	if(content.get(i).length()>300){
+	<table border="1">
+		<tr>
+			<td>post number :</td>
+			<td><%=j %></td>
+		</tr>
+		<tr>
+			<td>id:</td>
+			<td><%=ids.get(i) %>; For Testing; use hidden;</td>
+			
+		</tr>
 		
-		%>
-		<%=content.get(i).subSequence(0, 300)%>
-	<%
-		
-	}else{
-		%>
-		<%=content.get(i) %>
-	<%
-	}
 	
-	%>
-	... <button type="button" class="btn <%=buttonColors.get(k)%>">Read More</button>
-  </div>
+		<tr>
+			<td>title:</td>
+			<td><%=titles.get(i) %></td>
+		</tr>
+		</tr>
+			<td>category:</td>
+			<td><%=category.get(i) %></td>
+		</tr>
+		</tr>
+			<td>content</td>
+			<td><%=content.get(i) %></td>
+		</tr>	<tr>
+			<td>timestamp:</td>
+			<td><%=timestamp.get(i) %></td>
+		</tr>
+	
+		</table>
 
-</div>
-
+		<form action="PostManipulations" method="POST">
+		
+		<input type="submit" value = "ipDisp" name= "user_ip" />
+		<input type="hidden" name="id_value" value="<%= postTrack%>">
+		</form>
+		<form action="delete_key.jsp">
+		<input type="submit" value="delete" name="delete_button" onclick="<%=postTrack= Integer.parseInt(ids.get(i)) %>" />
+		
+		</form>
+		
 
 		<%
 		
 	}
-	%> </div>	<%
+	
 	}catch(SQLException e){
 	e.printStackTrace();
 }
