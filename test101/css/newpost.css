@@ -50,7 +50,8 @@ body { font-family: sans-serif; }
 
 .page{
 
-  margin-top: 50px;
+  margin-top: 36px;
+  margin-bottom: 0px;
 }
 
 /*used to remove extending of default text area*/
