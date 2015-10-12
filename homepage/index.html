@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A layout example that shows off a responsive product landing page.">
+
 
     <title>&copy;The Anonymous Blog Site Inc.</title>
 
@@ -56,21 +56,35 @@
 
 
 
-<div class="header">
+<div class="header" align = right>
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
         <a class="pure-menu-heading" href=""></a>
 
         <ul class="pure-menu-list">
             <li class="pure-menu-item" ><a href="#" class="pure-menu-link">HOME</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">LOGIN</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">SIGNUP</a></li>
+            <li class="pure-menu-item" id ="redirlogin"><a href="loading.html" class="pure-menu-link">LOGIN</a></li>
+
+            <li class="pure-menu-item" id="signup" ><a href="#loginform" class="pure-menu-link">SIGNUP</a></li>
         </ul>
+  
+     <script>
+     //Script used to navigate to bottom of page after clicking signup.
+      $("#signup").click(function() { //anonymous click function used as per convention
+    var elementClicked = $(this).attr("href");
+    var destination = $(elementClicked).offset().top; //offset --> gets the coordinates of the current elemrnt.
+    $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-15}, 500 );//not animated selects all the non animated elements such as html and 
+    return false;                                                                            //and body, and animates them.                               
+        
+
+      }
+</script> 
+   
     </div>
 </div>
 
-<div class="splash-container">
-    <div class="splash">
-        <h1 class="splash-head">A Blog That Matters.</h1>
+<div class="splash-container">   
+    <div class="splash"> 
+        <h1 class="splash-head">A Blog That Matters.</h1>  
         <p class="splash-subhead">
             POST YOUR THOUGHTS TO THE WORLD.
         </p>
@@ -190,47 +204,6 @@
     </div>
 
 </div>
-<script>
-(function (window, document) {
-var menu = document.getElementById('menu'),
-    WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange':'resize';
-
-function toggleHorizontal() {
-    [].forEach.call(
-        document.getElementById('menu').querySelectorAll('.header-can-transform'),
-        function(el){
-            el.classList.toggle('pure-menu-horizontal');
-        }
-    );
-};
-
-function toggleMenu() {
-    // set timeout so that the panel has a chance to roll up
-    // before the menu switches states
-    if (menu.classList.contains('open')) {
-        setTimeout(toggleHorizontal, 500);
-    }
-    else {
-        toggleHorizontal();
-    }
-    menu.classList.toggle('open');
-    document.getElementById('toggle').classList.toggle('x');
-};
-
-function closeMenu() {
-    if (menu.classList.contains('open')) {
-        toggleMenu();
-    }
-}
-
-document.getElementById('toggle').addEventListener('click', function (e) {
-    toggleMenu();
-});
-
-window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
-})(this, this.document);
-
-</script>
 
 
 
