@@ -1,0 +1,4 @@
+path.txt
+3.21.191.19 LocalGateway[67.195.160.76] 145.42.22.125 125.22.42.145 www.yahoo.com
+3.21.191.19 LocalGateway[67.195.160.76] 213.36.144.59 59.144.36.215 www.google.com
+3.21.191.19 LocalGateway[67.195.160.76] 216.115.96.52 76.13.0.191 www.wikipedia.org
