@@ -27,10 +27,25 @@ body{
 	bottom: -40px;
 	width: auto;
 	height: auto;
-	background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
 	background-size: cover;
 	-webkit-filter: blur(5px);
 	z-index: 0;
+}
+
+/*CSS for the background video*/
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
 }
 
 .grad{
@@ -75,27 +90,39 @@ body{
 	z-index: 2;
 }
 
+
 .login input[type=text]{
 	width: 250px;
 	height: 30px;
-	background: transparent;
+/*added opacity for transparency settings*/
+	opacity: 0.70;
+/*bg color for placeholder*/	
+	background:rgb(216,216,216);
+
 	border: 1px solid rgba(255,255,255,0.6);
 	border-radius: 2px;
-	color: #fff;
+/*text color for placeholder*/
+	
+	color:black;
 	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	padding: 4px;
 	margin-top:10px;
 }
-
 .login input[type=password]{
 	width: 250px;
 	height: 30px;
-	background: transparent;
+	/*added opacity for transparency settings*/
+	opacity: 0.70;
+/*bg color for placeholder*/	
+	background:rgb(216,216,216);
+
 	border: 1px solid rgba(255,255,255,0.6);
 	border-radius: 2px;
-	color: #fff;
+/*text color for placeholder*/
+	
+	color:black;
 	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
@@ -106,11 +133,12 @@ body{
 .login input[type=button]{
 	width: 260px;
 	height: 35px;
-	background: #fff;
+	opacity: 0.90;
+	background: rgb(216,216,216);
 	border: 1px solid #fff;
 	cursor: pointer;
 	border-radius: 2px;
-	color: #a18d6c;
+	color: #626262;
 	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
@@ -155,7 +183,16 @@ body{
 
   <body>
 
-    <div class="body"></div>
+    <div class="body">
+
+    <!--background video-->
+	<video controls muted autoplay loop poster="img/ab.png" id="bgvid">
+    <source src="video/lapse.webm" type="video/webm">
+    <source src="video/lapse.mp4" type="video/mp4">
+
+    
+	</video>    	
+    </div>
     
 		<div class="grad"></div>
 		<div class="header">
