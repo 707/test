@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+	<title>test</title>
+
+
+
+   <!-- Angular Material Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+        
+    <script src="js/main.js"></script>
+
+
+
+<style>
+/* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+body{
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+}
+.body{
+
+	width: 350px;
+	position: relative;
+	top: 150px;
+	left: 50%;
+	opacity: 0.8;
+
+}
+.md-padding{
+
+	height: 300px;
+
+}
+.bg-body{
+	float:right;
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-size: cover;
+	-webkit-filter: blur(4px);
+	z-index: 0;
+}
+
+/*CSS for the background video*/
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+}
+
+.grad{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	z-index: 1;
+	opacity: 0.7;
+}
+
+.header{
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(10% - 255px);
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 45px;
+	font-weight: 200;
+}
+
+.header div span{
+	color: #5379fa !important;
+}
+
+.header div small{
+
+	font-size: 20px;
+	color: #5379fa !important;
+	font-family: 'Exo', sans-serif;
+	font-weight: 200;
+
+
+}
+
+
+.login{
+	padding: 10px;
+	z-index: 2;
+}
+
+
+.login input[type=text]{
+	width: 250px;
+	height: 32px;
+/*added opacity for transparency settings*/
+	opacity: 0.60;
+/*bg color for placeholder*/	
+	background: #5379fa;
+
+	border: 2px solid #5369fa;
+	border-radius: 7px;
+/*text color for placeholder*/
+	
+	color:black;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top:10px;
+}
+.login input[type=password]{
+	width: 250px;
+	height: 32px;
+	/*added opacity for transparency settings*/
+	opacity: 0.60;
+/*bg color for placeholder*/	
+	/*background:rgb(216,216,216);*/
+	background:  #5379fa;
+
+	border: 2px solid #5369fa;
+	border-radius: 7px;
+/*text color for placeholder*/
+	
+	color:black;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.login input[type=button]{
+	width: 260px;
+	height: 39px;
+	opacity: 0.90;
+	background: #5379fa;
+	border: 2px solid #5369fa;
+	cursor: pointer;
+	border-radius: 7px;
+	color:  white;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.login input[type=button]:hover{
+	opacity: 0.8;
+	color: white;
+	background: #5379fa;
+
+
+}
+
+.login input[type=button]:active{
+	opacity: 0.6;
+
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	opacity: 0.7;
+	border: 2px solid #5379fa;
+	border-radius: 7px;
+
+
+}
+
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+	opacity: 0.7;
+	border: 2px solid rgba(255,255,255,0.6);
+	border-radius: 7px;
+
+}
+
+.login input[type=button]:focus{
+	outline: none;
+	opacity: 0.3;
+	color: white;
+	background: #5379fa;
+
+}
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+.test{
+
+	/*form box height inside container tab*/
+	height: 380px;
+	margin-left: 20px;
+	opacity: 2.4;
+
+}
+
+</style>
+
+<script src="js/prefixfree.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="bg-body">
+
+    <!--background video-->
+	<video controls muted autoplay loop poster="img/ab.png" id="bgvid">
+  
+    <source src="video/lapse.mp4" type="video/mp4">
+
+    
+	</video>    	
+    </div>
+    
+    <div class="body">
+		<div class="header">
+			<div>On the <span> go</span></div><br>
+			<div><small>Save notes. Online.</small></div>
+		</div>
+		
+	<div ng-cloak>
+	  <md-content>
+	    <md-tabs class="test">
+
+	      <md-tab label="Sign Up">
+	        <md-content class="md-padding">
+	          	
+	          	<div class="login">
+				<input type="text" placeholder="Username" name="user"><br>
+				<input type="password" placeholder="Password" name="password"><br>
+				<input type="text" placeholder="First Name" name="first name"><br>
+				<input type="text" placeholder="Last Name" name="last name"><br><br>
+				<input type="button" value="Login">
+				</div>
+	        </md-content>
+	      </md-tab>
+
+
+	      <md-tab label="Login">
+	        <md-content class="md-padding">
+
+	          	<div class="login">
+	          	<br>
+				<input type="text" placeholder="Username" name="user"><br>
+				<br><br>
+				<input type="password" placeholder="Password" name="password"><br>
+				<br><br>
+				<input type="button" value="Login">
+				</div>
+
+	        </md-content>
+	      </md-tab>
+	      
+	    </md-tabs>
+
+	  </md-content>
+
+	</div>
+
+
+
+	</div>
+
+
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    
+  </body>
+</html>
