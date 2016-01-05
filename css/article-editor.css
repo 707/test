@@ -1,0 +1,160 @@
+@import "//fonts.googleapis.com/css?family=Raleway:400,300,800|Lora:400italic|Playfair+Display:700";
+@import "//fonts.googleapis.com/css?family=Montserrat";
+
+body
+{
+font-family: 'Raleway' !important;
+overflow-y : visible !important;
+}
+.content
+{
+
+font-family: 'Raleway' !important;
+font-size: 20px !important;
+}
+
+/*the form  that contains the entire layout of input fields*/
+.new-article
+{
+	border-color: rgba(14, 102, 204, 0.65) #D3D6DB #D3D6DB;
+border-style: solid;
+border-width: 3px 1px 1px;
+color: #000;
+
+margin-bottom: 31px;
+padding: 4.5em 60px;
+width: 1000px;
+height: 100%;
+position: relative;
+top: 50%;
+left: -114px;
+font-family: 'Raleway' !important;
+
+    }
+
+    /* publish btn (Duh!)*/
+#submit{
+
+	text-decoration: none;
+	margin-bottom: 30px;
+
+ color: #fff;
+ margin-left: -115px;
+}
+
+.close{
+
+	position: relative;
+margin-bottom: 20px;	
+margin-left: 1190px;
+
+color: #fff !important;
+
+}
+
+    .instructions{
+    	 margin-left: 0px;
+color: #FFF;
+background: #000 none repeat scroll 0% 0%;
+width: 1900px;
+position: relative;
+padding-left: 275px;
+padding-top: 30px;
+padding-bottom: 30px;
+    }
+/*media queries start here*/
+
+
+/*media query for smaller devices*/
+ @media (max-width:40em){
+.new-article
+{
+	border-color: rgba(14, 102, 204, 0.65) #D3D6DB #D3D6DB;
+border-style: solid;
+border-width: 3px 1px 1px;
+color: #000;
+font-size: 100%;
+margin-bottom: 30px;
+padding: 2.5em 20px;
+width: 290px;
+height: 100%;
+position: relative;
+top: 50%;
+left: 13px;
+    }
+
+.welcome-text{
+	color:grey;
+	font-size: 90%;
+    }
+
+#submit{
+
+	text-decoration: none;
+	margin-left: 100px;
+	margin-top: -10px;
+}
+.close
+{
+	margin-left: 230px;
+	color: white !important;
+	
+}
+.instructions
+{
+padding: 0.5em 12em 1em;
+left: -99px;
+width: 500px;
+font-size: 70%;
+overflow-y: hidden;
+
+}
+}
+
+/* media query for tablets and iphones*/
+  @media (min-width: 40em) and (max-width: 70em){
+.new-article
+{
+	border-color: rgba(14, 102, 204, 0.65) #D3D6DB #D3D6DB;
+border-style: solid;
+border-width: 3px 1px 1px;
+color: #000;
+font-size: 100%;
+margin-bottom: 30px;
+padding: 2.5em 20px;
+width: 90%;
+height: 100%;
+position: relative;
+top: 50%;
+left: 26px;
+max-width: 500px;
+text-rendering: optimizelegibility;
+    }
+
+.welcome-text{
+	color:grey;
+	font-size: 90%;
+    }
+
+#submit{
+
+	text-decoration: none;
+	margin-left: 100px;
+	margin-top: -10px;
+}
+.close
+{
+	margin-left: 230px;
+	color: white !important;
+	
+}
+.instructions
+{
+padding: 0.5em 12em 1em;
+left: -99px;
+width: 900px;
+font-size: 70%;
+overflow-y: hidden;
+
+}
+}

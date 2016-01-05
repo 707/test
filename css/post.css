@@ -1,0 +1,581 @@
+@import "//fonts.googleapis.com/css?family=Raleway:400,300,800|Lora:400italic|Playfair+Display:700";
+@import "//fonts.googleapis.com/css?family=Montserrat";
+body {
+    color: #252a3a;
+    font-family: "Raleway",sans-serif;
+    margin-left: 500px;
+}
+#data{
+    display: none !important;
+}
+/* The submit button for the update pic form*/
+#propic_submit{
+margin-top: -30px;
+display: block !important;
+}
+
+/*The edit and close icons*/
+.icon
+{
+    margin-left: 279px;
+position: absolute;
+top: 5px;
+}
+/* read more . . .*/
+.continue-reading
+{
+    color: #009688;
+
+}
+
+
+
+@-moz-document url-prefix(){
+
+#output{
+   margin-left: 249px;
+}
+
+.icon{
+  margin-left:-30px;
+}
+}
+
+#popular
+{
+    cursor: pointer;
+}
+/*css for the search box starts here*/
+
+.container-1{
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+.container-1 input#search{
+width: 200px;
+height: 30px;
+border: medium none;
+font-size: 10pt;
+float: left;
+color: #63717F;
+border-radius: 5px;
+margin-bottom: 5px;
+margin-left: 100px;
+text-align: center;
+}
+.container-1 input#search::-webkit-input-placeholder {
+   color: #65737e;
+
+}
+
+ 
+.container-1 input#search:-moz-placeholder { /* Firefox 18- */
+   color: #65737e;  
+}
+ 
+.container-1 input#search::-moz-placeholder {  /* Firefox 19+ 
+   color: #65737e;  
+}
+ 
+.container-1 input#search:-ms-input-placeholder {  
+   color: #65737e;  
+}
+.container-1 .icon{
+  position: absolute;
+  top: 50%;
+  margin-left: 275px;
+  margin-top: 6px;
+  z-index: 1;
+  color: #4f5b66;
+}
+  @-moz-document url-prefix() { /*search icon not prper in moz*/
+.container-1 .icon{
+  margin-left: -20px;
+
+}
+}
+
+
+.container-1 input#search:hover, .container-1 input#search:focus, .container-1 input#search:active{
+    outline:none;
+    background: #ffffff;
+  }
+  /* The individual divs on searching*/
+.search{
+    padding: 5px;
+    cursor: pointer;
+    
+}
+
+/*search bar output*/
+#output
+{
+    width: 200px;
+background: #FFF none repeat scroll 0px 0px;
+border-color: rgba(14, 102, 204, 0.65) #D3D6DB #D3D6DB;
+border-image: none;
+border-radius: 0px;
+border-style: solid;
+border-width: 3px 2px 2px;
+color: #000;
+font-size: 90%;
+margin-left: 290px;
+z-index: 99999;
+height: auto;
+text-align: left;
+position: fixed;
+top: 55px;
+display: none;
+font-family: 'Raleway' !important;
+}
+/*css for the search box ends here*/
+
+/* Thats all Folks*/
+.end {
+    color : rgba(27, 26, 26, 0.77) none repeat scroll 0px 0px;
+    margin-left: -421px;
+    margin-top: 175px;
+    padding: 1.5em 10em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+/* Show more posts*/
+
+.load-more {
+    background: rgb(216, 234, 244) none repeat scroll 0 0;
+}
+
+/* individual buttons for each category loading*/
+#all-load,#popular-load {
+    margin-bottom: 30px;
+    margin-left: 350px;
+    margin-top: 250px;
+    position: relative;
+}
+#design-load, #fash-load, #tech-load, #ent-load, #trav-load {
+    margin-bottom: 30px;
+    margin-left: 350px;
+    margin-top: 200px;
+    position: relative;
+}
+
+
+.save-changes {
+    background-color: #252a3a;
+    color: white;
+    margin-left: 258px;
+    margin-top: -70px;
+}
+
+/*heading of each categry*/
+#category_heading {
+    font-family: "Raleway",sans-serif !important;
+    margin: 100px -100px -170px -233px;
+}
+.posts {
+    font-family: "Raleway",sans-serif;
+    margin-bottom: -150px;
+    margin-left: -233px;
+    margin-top: 100px;
+    overflow-x: hidden;
+    padding-top: 100px;
+    text-rendering : optimizelegibility;
+    max-width: 1200px;
+}
+span.all_icon, span.tech_icon, span.design_icon, span.ent_icon, span.fashion_icon, span.travel_icon, span.profile_icon, span.settings_icon, span.logout_icon, span.about_icon {
+    color: white;
+    margin-left: 13px;
+    margin-top: 14px;
+    position: absolute;
+    z-index: 1;
+}
+
+
+}
+.pure-g {
+    letter-spacing: normal;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+.primary-button, .secondary-button {
+    border-radius: 0;
+    box-shadow: none;
+}
+.primary-button {
+    background: #1b98f8 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 120%;
+    height: 42px;
+    margin: 76px 0 1em;
+    width: 100%;
+    z-index: -999999;
+}
+.secondary-button {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    color: #666;
+    font-size: 80%;
+    padding: 0.5em 2em;
+}
+#list {
+    margin: 100px;
+}
+#nav .pure-menu {
+    background: transparent none repeat scroll 0 0;
+    border: medium none;
+    text-align: left;
+}
+#nav .pure-menu-link:hover, #nav .pure-menu-link:focus {
+    background: transparent none repeat scroll 0 0;
+}
+#nav .pure-menu-link {
+    color: #fff;
+    margin-left: 0.5em;
+}
+#nav .pure-menu-heading {
+    border-bottom: medium none;
+    color: rgb(75, 113, 151);
+    font-size: 110%;
+}
+.nav-header {
+    background: rgba(39, 48, 54, 0.93) none repeat scroll 0px 0px;
+    margin-left: -270px;
+    margin-top: -136px;
+    opacity: 1;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-header .pure-menu-horizontal {
+     border: medium none;
+    margin-top: 55px;
+    text-align: left;
+    padding-bottom: 20px;
+}
+.nav-header .pure-menu-horizontal .pure-menu-list *:hover {
+    background: transparent none repeat scroll 0 0;
+}
+#login_username {
+    background: transparent none repeat scroll 0 0;
+    color: white;
+    left: 225px;
+}
+.nav-header .pure-menu-horizontal .pure-menu-list *:active {
+}
+.nav-header .pure-menu-horizontal:focus {
+    background: transparent none repeat scroll 0 0;
+}
+.nav-header .pure-menu-link {
+    background: transparent none repeat scroll 0 0;
+    color: rgb(255, 255, 255);
+    float: left;
+    margin-left: 50px;
+    z-index: -9999;
+}
+.content-subhead {
+    border-bottom: 1px solid #eee;
+    color: #aaa;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    padding: 0.4em 0;
+    text-transform: uppercase;
+}
+.content {
+    padding: 2em 1em 0;
+}
+.content-subhead {
+    border-bottom: 1px solid #eee;
+    color: #aaa;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    padding: 0.4em 0;
+    text-transform: uppercase;
+}
+.content {
+    padding: 2em 1em 0;
+}
+.post {
+    padding-bottom: 2em;
+}
+.post-title {
+    color: #222;
+    font-size: 2em;
+    margin-bottom: 0.2em;
+}
+.post-avatar {
+    border-radius: 5px;
+    float: right;
+    left: 205px;
+    margin-bottom: 15px;
+    position: relative;
+    top: 3px;
+}
+.margin {
+    margin-left: -240px;
+}
+.user_image {
+    left: 500px;
+}
+.post-description {
+    color: #444;
+    font-family: "Raleway",sans-serif;
+    line-height: 1.8em;
+}
+.post-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+}
+.post-category {
+    background: #999 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 80%;
+    margin: 0 0.1em;
+    padding: 0.3em 1em;
+    font-family: 'Montserrat',sans-serif;
+    border-radius: 2px;
+}
+.post-category-design {
+    background: #5aba59 none repeat scroll 0 0;
+}
+.post-category-pure {
+    background: #4d85d1 none repeat scroll 0 0;
+}
+.post-category-yui {
+    background: #8156a7 none repeat scroll 0 0;
+}
+.post-category-js {
+    background: #df2d4f none repeat scroll 0 0;
+}
+.post-images {
+    margin: 1em 0;
+}
+.post-image-meta {
+    color: #fff;
+    margin-left: 1em;
+    margin-top: -3.5em;
+    text-shadow: 0 1px 1px #333;
+}
+
+.post-author {
+    color: #2d3e50;
+    font-family: 'Montserrat',sans-serif;
+}
+@media (max-width: 28em){
+.end
+{
+    
+    margin-left: 0px;
+    padding: 1.5em 1em 2em;
+    left: 0px;
+    width: 108%;
+}
+
+  
+.container-1 input#search{
+ 
+    width: 150px;
+    height: 30px;
+    border: medium none;
+    font-size: 10pt;
+    color: rgb(67, 131, 195);
+    padding-left: 40px;
+    margin-bottom: 5px;
+    text-align: left;
+    float: left;
+    font-family: "Raleway";
+    border-radius: 3px;
+    margin-left:-5px
+}
+
+.container-1 .icon{
+  position: absolute;
+  top: 50%;
+  
+  margin-top: 6px;
+  z-index: 1;
+  color: #4f5b66;
+  opacity:0.8;  
+  margin-left: 125px;
+}
+.posts {
+    font-size: 0.85em;
+
+    margin-bottom: -150px;
+    margin-left: -486px !important;
+    max-width: 320px;
+    overflow-x: hidden;
+    text-rendering: optimizelegibility;
+}
+
+#recent_post
+{
+    display:none !important;
+}
+#login_username {
+    display: none;
+}
+#top {
+    margin-bottom: 20px;
+    margin-left: -500px;
+    margin-top: -100px;
+    opacity: 1;
+    padding-bottom: 20px;
+}
+.nav-header .pure-menu-horizontal {
+    border: medium none;
+    position: relative;
+    text-align: left;
+}
+#all-load, #design-load, #ent-load, #trav-load, #tech-load,#fash-load,#popular-load {
+    margin-bottom: 30px;
+    margin-left: -420px;
+    margin-top: 250px;
+    position: relative;
+}
+div#ui-datepicker-div {
+    margin-left: 0;
+    margin-top: 315px;
+    width: 280px;
+}
+
+.nav-header .pure-menu-link{
+        margin-left: -5px;
+        
+    }
+
+    #category_heading {position: absolute;
+    margin-left: -483px;
+    top: 50px;font-size: 25px;
+}
+
+.primary-button
+{
+height: 30px;
+top: -21px;
+position: relative;
+margin-bottom: -5px;
+font-size: 15px;
+overflow: hidden;
+}
+    .nav-header{
+        background: #000;
+    }
+
+    #output
+    {
+       margin-left: -298px;
+width: 150px;
+margin-top: 40px;
+    }
+    .post-title{
+        font-size: 1.5em !important;
+    }
+
+}
+@media (min-width: 28em) and  (max-width:55em){
+#top {
+    margin-bottom: 20px;
+    margin-left: -500px;
+    margin-top: -100px;
+    opacity: 1;
+    padding-bottom: 20px;
+}
+.post-title{
+        font-size: 1.5em !important;
+    }
+#output
+    {
+margin-left: -300px;
+width: 200px;
+margin-top: 40px;
+    }
+
+.container-1 input#search{
+ 
+    width: 200px;
+    height: 30px;
+    border: medium none;
+    font-size: 10pt;
+    color: rgb(67, 131, 195);
+    padding-left: 40px;
+    margin-bottom: 5px;
+    text-align: left;
+    float: left;
+    font-family: "Raleway";
+    border-radius: 3px;
+    margin-left:0px
+}
+
+.container-1 .icon{
+  position: absolute;
+  top: 50%;
+  
+  margin-top: 6px;
+  z-index: 1;
+  color: #4f5b66;
+  opacity:0.8;  
+  margin-left: 170px;
+}
+.posts {
+    font-size: 1em;
+   
+    margin-bottom: -150px;
+    margin-left: -486px !important;
+    overflow-x: hidden;
+    text-rendering: optimizelegibility;
+}
+
+ #category_heading {position: absolute;
+    margin-left: -483px;
+    top: 50px;font-size: 35px;
+}
+#recent_post
+{
+    display: none !important;
+}
+
+  .nav-header{
+        background: #000;
+    }
+
+
+.nav-header .pure-menu-link{
+        margin-left: -10px;
+        
+    }
+
+    #all-load, #design-load, #ent-load, #trav-load, #tech-load,#fash-load,#popular-load {
+    margin-bottom: 30px;
+    margin-left: -300px;
+    margin-top: 250px;
+    position: relative;
+}
+
+.end
+{
+     margin-left: 0px;
+    padding: 0.5em 12em 1em;
+    left: -175px;
+    width: 800px;
+}
+.primary-button
+{
+height: 30px;
+top: -21px;
+position: relative;
+margin-bottom: -5px;
+font-size: 15px;
+overflow: hidden;
+}
+}
+
+}

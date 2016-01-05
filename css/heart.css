@@ -1,0 +1,75 @@
+/*like btn*/
+.heart {
+background: url(../web_heart_animation.png);
+background-position: left;
+background-repeat: no-repeat;
+height: 50px;
+width: 50px;
+cursor: pointer;
+position: absolute;
+left:334px;
+background-size:1450px; 
+}
+.heart:hover
+{
+background-position: right; 
+}
+
+.likeCount
+{
+margin-top: 13px;
+margin-left: 368px;
+font-size: 16px;
+color: #999999;
+}
+/*adding the effect on clicking heart*/
+@-webkit-keyframes heartBlast {
+0% {background-position: left;}
+100% {background-position: right;}
+}
+
+@keyframes heartBlast {
+0% {background-position: left;}
+100% {background-position: right;}
+}
+
+.heartAnimation 
+{
+-webkit-animation-name: heartBlast; 
+animation-name: heartBlast;
+-webkit-animation-duration: 1s;
+animation-duration: 1s;
+-webkit-animation-iteration-count: 1;
+animation-iteration-count: 1;
+-webkit-animation-timing-function: steps(28); 
+animation-timing-function: steps(28);
+background-position: right;
+}
+
+#hidden
+{
+    display: none !important;
+}
+
+@media(max-width:28em){
+    
+    .heart{
+        left:0px;
+    }
+     .likeCount{
+         margin-left:40px;
+     }
+
+}
+
+
+@media(min-width:28em) and (max-width:55em) {
+         .heart{
+        left:0px;
+    }
+     .likeCount{
+         margin-left:40px;
+     }
+
+        
+    }
